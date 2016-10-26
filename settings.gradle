@@ -1,0 +1,3 @@
+rootProject.name = 'dockerfarm-composition-manager'
+
+include 'common'
