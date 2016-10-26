@@ -1,4 +1,4 @@
-package org.dofacoma.comm;
+package org.dofacoma.common;
 
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
