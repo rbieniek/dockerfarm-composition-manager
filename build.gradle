@@ -67,6 +67,8 @@ configure(allprojects) {
         commonsCollections4Version = '4.1'
         httpCommonsVersion = '4.5.2'
 
+        dockerJavaVersion = '3.0.3'
+
         lombokVersion = '1.16.10'
 
         liquibaseVersion = '3.5.1'
