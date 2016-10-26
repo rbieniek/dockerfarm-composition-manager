@@ -21,9 +21,12 @@ buildscript {
 	springDataReleaseTrainVersion = 'Hopper-SR4'
     }
 
+    repositories {
+        mavenCentral()
+    }
+
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-        classpath "com.github.ben-manes:gradle-versions-plugin:${gradleVersionsPluginVersion}"
         classpath "io.spring.gradle:dependency-management-plugin:${springGradleDependencyManagemenPluginVersion}"
 	classpath "se.transmode.gradle:gradle-docker:${gradleDockerPluginVersion}"
     }
@@ -76,6 +79,10 @@ configure(allprojects) {
         gradleDir = "${rootProject.projectDir}/gradle"
 
         generatedSourcesDir = 'target/generated'
+    }
+
+    repositories {
+        mavenCentral()
     }
 
     configurations {
@@ -142,7 +149,6 @@ configure(rootProject) {
 
 configure(javaProjects) {
     apply plugin: 'java'
-    apply plugin: 'com.github.ben-manes.versions'
 
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion

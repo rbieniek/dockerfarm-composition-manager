@@ -1,3 +1,4 @@
 rootProject.name = 'dockerfarm-composition-manager'
 
 include 'common'
+include 'composition-manager'

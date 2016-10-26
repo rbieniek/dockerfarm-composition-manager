@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+  compile project(':common')
+
+  runtime group: 'org.liquibase', name: 'liquibase-core', version: liquibaseVersion
+}
+
+project.archivesBaseName = 'composition-manager'
