@@ -15,7 +15,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@EnableWebMvc
 @ComponentScan(excludeFilters=@Filter(type=FilterType.ANNOTATION, classes=TestConfiguration.class))
 @Import(CommonConfig.class)
 public class CompositionManagerMain {
