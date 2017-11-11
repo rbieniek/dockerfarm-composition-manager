@@ -15,6 +15,16 @@
 
         <dependency>
             <groupId>org.dofacoma</groupId>
+            <artifactId>akka-spring</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dofacoma</groupId>
+            <artifactId>akka-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dofacoma</groupId>
             <artifactId>coma-monitoring</artifactId>
         </dependency>
 
@@ -172,7 +182,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>de.hermes.avise.service.AviseApplication</mainClass>
+                    <mainClass>org.dofacoma.composition.manager.CompositionManagerMain</mainClass>
                     <executable>true</executable>
                 </configuration>
             </plugin>

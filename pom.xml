@@ -13,6 +13,8 @@
         <module>coma-monitoring</module>
         <module>coma-service-engine-common</module>
         <module>coma-service-engine-undertow</module>
+        <module>akka-spring</module>
+        <module>akka-support</module>
         <module>composition-manager</module>
     </modules>
 
@@ -73,6 +75,7 @@
         <plugin.docker.maven.version>0.22.1</plugin.docker.maven.version>
         <bsc.maven.processor.plugin.version>3.3.1</bsc.maven.processor.plugin.version>
         <hibernate.modelgen.version>5.2.10.Final</hibernate.modelgen.version>
+        <akka.actor.version>2.5.6</akka.actor.version>
         <scala-maven-version>3.3.1</scala-maven-version>
         <scalatest.version>3.0.1</scalatest.version>
         <scala.version>2.12.2</scala.version>
@@ -89,6 +92,18 @@
             <dependency>
                 <groupId>org.dofacoma</groupId>
                 <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dofacoma</groupId>
+                <artifactId>akka-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dofacoma</groupId>
+                <artifactId>akka-support</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -205,6 +220,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.16.16</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-actor_2.11</artifactId>
+                <version>${akka.actor.version}</version>
             </dependency>
 
             <dependency>
