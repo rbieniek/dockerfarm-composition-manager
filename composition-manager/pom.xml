@@ -38,6 +38,20 @@
             <artifactId>coma-service-engine-undertow</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.dofacoma</groupId>
+            <artifactId>docker-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dofacoma</groupId>
+            <artifactId>coma-persistence</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dofacoma</groupId>
+            <artifactId>coma-service-definition</artifactId>
+        </dependency>
 
         <!-- Spring Boot -->
         <dependency>
@@ -197,7 +211,6 @@
                 <dependency>
                     <groupId>com.oracle</groupId>
                     <artifactId>ojdbc7</artifactId>
-                    <version>${oracle.version}</version>
                 </dependency>
             </dependencies>
         </profile>
