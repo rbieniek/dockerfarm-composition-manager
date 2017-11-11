@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- Log message format -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%X{X-PI-SPAN-ID:-}/%X{X-PI-TRACE-ID:-}] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+<!-- 	<appender name="stash" -->
+<!-- 		class="net.logstash.logback.appender.LogstashTcpSocketAppender"> -->
+<!-- 		<remoteHost>lxeutstdocker01.int.hlg.de</remoteHost> -->
+<!-- 		<port>4564</port> -->
+
+<!-- 		<encoder class="net.logstash.logback.encoder.LogstashEncoder"> -->
+<!-- 			<includeCallerData>true</includeCallerData> -->
+<!-- 			<fieldNames> -->
+<!-- 				<levelValue>[ignore]</levelValue> -->
+<!-- 			</fieldNames> -->
+<!-- 			<customFields>{"application":"HGPriceProductService","service":"HGPriceProductService"}} -->
+<!-- 			</customFields> -->
+<!-- 		</encoder> -->
+<!-- 	</appender> -->
+
+	<logger name="org.hibernate.SQL" level="INFO" />
+	<logger name="org.hibernate.type" level="ALL" />
+   	<logger name="org.hibernate" level="INFO" />
+   
+	<!-- Setting the root level of logging to INFO -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+<!-- 		<appender-ref ref="stash" /> -->
+	</root>
+  
+</configuration>

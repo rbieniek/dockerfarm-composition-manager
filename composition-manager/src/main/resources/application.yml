@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: Composition manager
+
+liquibase:
+  change-log: classpath:db/db.changelog.xml
+
+endpoints:
+  hypermedia:
+    enabled: true
+  health:
+    sensitive: false
+
+management:
+  context-path: /manage
+  security:
+    enabled: false
+
+hermes:
+  server:
+    http2:
+      enabled: true
+  avise:
+    health:
+      database-scan-interval: 15
+      broker-scan-interval: 15
+    threadpool:
+      base-pool-size: 10
+      max-pool-size: 10
+      thread-life-time: 60
+      backlog-size: 10
+    builder:
+      generate-sa53: false
+      generating-service-name: pi
+    scheduling:
+      avise-transfer-interval: 60
+      avise-reply-process-interval: 60
+      avise-cleanup-process-interval: 900
+      avise-gather-statistics-interval: 30
+      max-outbound-messages-per-scan: 1024
+      max-inbound-messages-per-scan: 1024
+      max-outdated-messages-per-scan: 1024
+      max-avise-age-days: 90
+      threadpool:
+        base-pool-size: 10
+        max-pool-size: 10
+        thread-life-time: 60
+        backlog-size: 10
+  monitoring:
+    health:
+      export-interval: 30
